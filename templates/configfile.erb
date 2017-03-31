@@ -1,0 +1,119 @@
+[mysqld]
+<% if @mysqld_datadir -%>
+datadir                 = <%= @mysqld_datadir %>
+<% end -%>
+<% if @mysqld_socket -%>
+socket                  = <%= @mysqld_socket %>
+<% end -%>
+<% if @mysqld_symbolic_links -%>
+symbolic-links          = <%= @mysqld_symbolic_links %>
+<% end -%>
+<% if @mysqld_user -%>
+user                    = <%= @mysqld_user %>
+<% end -%>
+<% if @mysqld_bind_address -%>
+bind-address            = <%= @mysqld_bind_address %>
+<% end -%>
+<% if @mysqld_local_infile -%>
+local-infile            = <%= @mysqld_local_infile %>
+<% end -%>
+<% if @mysqld_pid_file -%>
+pid-file                = <%= @mysqld_pid_file %>
+<% end -%>
+<% if @mysqld_port -%>
+port                    = <%= @mysqld_port %>
+<% end -%>
+<% if @mysqld_basedir -%>
+basedir                 = <%= @mysqld_basedir %>
+<% end -%>
+<% if @mysqld_tmpdir -%>
+tmpdir                  = <%= @mysqld_tmpdir %>
+<% end -%>
+<% if @mysqld_lc_messages_dir -%>
+lc-messages-dir         = <%= @mysqld_lc_messages_dir %>
+<% end -%>
+<% if @mysqld_skip_external_locking -%>
+skip-external-locking
+<% end -%>
+<% if @mysqld_key_buffer -%>
+key_buffer              = <%= @mysqld_key_buffer %>
+<% end -%>
+<% if @mysqld_key_buffer_size -%>
+key_buffer_size         = <%= @mysqld_key_buffer_size %>
+<% end -%>
+<% if @mysqld_max_allowed_packet -%>
+max_allowed_packet      = <%= @mysqld_max_allowed_packet %>
+<% end -%>
+<% if @mysqld_thread_stack -%>
+thread_stack            = <%= @mysqld_thread_stack %>
+<% end -%>
+<% if @mysqld_thread_cache_size -%>
+thread_cache_size       = <%= @mysqld_thread_cache_size %>
+<% end -%>
+<% if @mysqld_myisam_recover -%>
+myisam-recover          = <%= @mysqld_myisam_recover %>
+<% end -%>
+<% if @mysqld_myisam_recover_options -%>
+myisam-recover-options  = <%= @mysqld_myisam_recover_options %>
+<% end -%>
+<% if @mysqld_query_cache_limit -%>
+query_cache_limit       = <%= @mysqld_query_cache_limit %>
+<% end -%>
+<% if @mysqld_query_cache_size -%>
+query_cache_size        = <%= @mysqld_query_cache_size %>
+<% end -%>
+<% if @mysqld_log_error -%>
+log_error               = <%= @mysqld_log_error %>
+<% end -%>
+<% if @mysqld_expire_logs_days -%>
+expire_logs_days        = <%= @mysqld_expire_logs_days %>
+<% end -%>
+<% if @mysqld_max_binlog_size -%>
+max_binlog_size         = <%= @mysqld_max_binlog_size %>
+<% end -%>
+
+[mysqld_safe]
+<% if @mysqld_safe_log_error -%>
+log-error = <%= @mysqld_safe_log_error %>
+<% end -%>
+<% if @mysqld_safe_pid_file -%>
+pid-file  = <%= @mysqld_safe_pid_file %>
+<% end -%>
+<% if @mysqld_safe_socket -%>
+socket    = <%= @mysqld_safe_socket %>
+<% end -%>
+<% if @mysqld_safe_nice -%>
+nice      = <%= @mysqld_safe_nice %>
+<% end -%>
+
+[client]
+<% if @client_port -%>
+port   = <%= @client_port %>
+<% end -%>
+<% if @client_socket -%>
+socket = <%= @client_socket %>
+<% end -%>
+
+[mysqldump]
+<% if @mysqldump_quick -%>
+quick
+<% end -%>
+<% if @mysqldump_quote_names -%>
+quote-names
+<% end -%>
+<% if @mysqldump_max_allowed_packet -%>
+max_allowed_packet = <%= @mysqldump_max_allowed_packet %>
+<% end -%>
+
+[mysql]
+
+[isamchk]
+<% if @isamchk_key_buffer -%>
+key_buffer = <%= @isamchk_key_buffer %>
+<% end -%>
+
+<% if !@includedir.empty? -%>
+<% @includedir.each do |directory| -%>
+!includedir <%= directory %>
+<% end -%>
+<% end -%>

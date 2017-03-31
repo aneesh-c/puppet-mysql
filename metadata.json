@@ -1,0 +1,41 @@
+{
+  "name": "aneesh-mysql",
+  "version": "1.1.0",
+  "author": "aneesh",
+  "summary": "Puppet module for mysql",
+  "license": "Apache-2.0",
+  "source": "https://github.com/aneesh-c/puppet-mysql",
+  "project_page": "https://github.com/aneesh-c/puppet-mysql",
+  "issues_url": "https://github.com/aneesh-c/puppet-mysql/issues",
+  "tags": [
+    "mysql",
+    "database",
+    "mysql-database",
+    "mysql-server"
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04",
+        "16.04"
+      ]
+    }
+  ],
+  "dependencies": [
+  
+  ]
+}
