@@ -62,8 +62,11 @@ query_cache_limit       = <%= @mysqld_query_cache_limit %>
 <% if @mysqld_query_cache_size -%>
 query_cache_size        = <%= @mysqld_query_cache_size %>
 <% end -%>
-<% if @mysqld_log_error -%>
-log_error               = <%= @mysqld_log_error %>
+<% if @mysqld_loguerror -%>
+log_error               = <%= @mysqld_loguerror %>
+<% end -%>
+<% if @mysqld_logherror -%>
+log-error               = <%= @mysqld_logherror %>
 <% end -%>
 <% if @mysqld_expire_logs_days -%>
 expire_logs_days        = <%= @mysqld_expire_logs_days %>

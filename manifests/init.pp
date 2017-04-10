@@ -12,9 +12,11 @@
 #
 
 class mysql (
-  $package_name                  = $::mysql::params::package_name,
+  $packagename_default           = $::mysql::params::packagename_default,
+  $packagename_communityrelease  = [ 'mysql-community-server' ],
   $configfile                    = $::mysql::params::configfile,
   $template                      = 'mysql/configfile.erb',
+  $community_release             = undef,
   $mysqld_datadir                = undef,
   $mysqld_socket                 = undef,
   $mysqld_symbolic_links         = undef,
@@ -51,15 +53,25 @@ class mysql (
   $isamchk_key_buffer            = undef,
   $includedir                    = [],
 ) inherits ::mysql::params {
-  package { $package_name: ensure => installed }
+  if $community_release {
+    $packagename = $packagename_communityrelease
+    $mysqld_logherror = $mysqld_log_error
+    $mysqld_loguerror = undef
+  }
+  else {
+    $packagename = $packagename_default
+    $mysqld_logherror = undef
+    $mysqld_loguerror = $mysqld_log_error
+  }
+  package { $packagename: ensure => installed }
   file { $configfile:
-    require => package[$package_name],
+    require => package[$packagename],
     backup  => '.backup',
     content => template($template),
   }
   if $::osfamily == 'RedHat' {
     service { 'mysqld':
-      require => package[$package_name],
+      require => package[$packagename],
       enable  => true,
     }
   }
