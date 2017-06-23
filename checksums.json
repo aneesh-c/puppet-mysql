@@ -1,0 +1,8 @@
+{
+  "LICENSE": "ea3abe1d0358033f43557a00f6fcc43e",
+  "README.md": "64330b031dc48207c7ac958e3f17980a",
+  "manifests/init.pp": "87b17a703d74e22e076e0aaf936d30ef",
+  "manifests/params.pp": "aa75e2b373ac9fa406d0009005081ea3",
+  "metadata.json": "29cfca73f40358eb88b785f2984322c5",
+  "templates/configfile.erb": "7b44e5c02733d5cc5111b1a82a826ede"
+}
