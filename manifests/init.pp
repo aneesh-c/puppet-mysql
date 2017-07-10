@@ -65,7 +65,7 @@ class mysql (
   }
   package { $packagename: ensure => installed }
   file { $configfile:
-    require => package[$packagename],
+    require => Package[$packagename],
     backup  => '.backup',
     content => template($template),
   }

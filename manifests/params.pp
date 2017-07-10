@@ -18,6 +18,10 @@ class mysql::params {
           $packagename_default = [ 'mysql-server' ]
           $configfile = '/etc/mysql/mysql.conf.d/mysqld.cnf'
         }
+        /^17.*/: {
+          $packagename_default = [ 'mysql-server' ]
+          $configfile = '/etc/mysql/mysql.conf.d/mysqld.cnf'
+        }
         default: {
           $packagename_default = [ 'mysql-server', 'libapache2-mod-auth-mysql' ]
           $configfile = '/etc/mysql/my.cnf'
