@@ -1,8 +1,8 @@
 {
   "LICENSE": "ea3abe1d0358033f43557a00f6fcc43e",
   "README.md": "64330b031dc48207c7ac958e3f17980a",
-  "manifests/init.pp": "49e7a3fbecbd1c03622162b48cebbb14",
-  "manifests/params.pp": "1bd069daf235722db5936d007fd6f7a7",
-  "metadata.json": "0f265b69857335541dbeacdb0149b87d",
-  "templates/configfile.erb": "7b44e5c02733d5cc5111b1a82a826ede"
+  "manifests/init.pp": "1ba187135109dda5f357e1387639c4be",
+  "manifests/params.pp": "c041f036a2ba818f3c17df6a39545581",
+  "metadata.json": "477f7d2853af7754f1787051d40d2f31",
+  "templates/configfile.erb": "05546dbd46db46a1085721c71ff52090"
 }

@@ -56,6 +56,9 @@ myisam-recover          = <%= @mysqld_myisam_recover %>
 <% if @mysqld_myisam_recover_options -%>
 myisam-recover-options  = <%= @mysqld_myisam_recover_options %>
 <% end -%>
+<% if @mysqld_myisam_recover_options_u -%>
+myisam_recover_options  = <%= @mysqld_myisam_recover_options_u %>
+<% end -%>
 <% if @mysqld_query_cache_limit -%>
 query_cache_limit       = <%= @mysqld_query_cache_limit %>
 <% end -%>
@@ -74,6 +77,12 @@ expire_logs_days        = <%= @mysqld_expire_logs_days %>
 <% if @mysqld_max_binlog_size -%>
 max_binlog_size         = <%= @mysqld_max_binlog_size %>
 <% end -%>
+<% if @mysqld_character_set_server -%>
+character-set-server    = <%= @mysqld_character_set_server %>
+<% end -%>
+<% if @mysqld_collation_server -%>
+collation-server        = <%= @mysqld_collation_server %>
+<% end -%>
 
 [mysqld_safe]
 <% if @mysqld_safe_log_error -%>
@@ -88,13 +97,22 @@ socket    = <%= @mysqld_safe_socket %>
 <% if @mysqld_safe_nice -%>
 nice      = <%= @mysqld_safe_nice %>
 <% end -%>
+<% if @mysqld_safe_skip_log_error -%>
+skip_log_error
+<% end -%>
+<% if @mysqld_safe_syslog -%>
+syslog
+<% end -%>
 
 [client]
 <% if @client_port -%>
-port   = <%= @client_port %>
+port                  = <%= @client_port %>
 <% end -%>
 <% if @client_socket -%>
-socket = <%= @client_socket %>
+socket                = <%= @client_socket %>
+<% end -%>
+<% if @client_default_character_set -%>
+default-character-set = <%= @client_default_character_set %>
 <% end -%>
 
 [mysqldump]
@@ -109,6 +127,9 @@ max_allowed_packet = <%= @mysqldump_max_allowed_packet %>
 <% end -%>
 
 [mysql]
+<% if @mysql_default_character_set -%>
+default-character-set = <%= @mysql_default_character_set %>
+<% end -%>
 
 [isamchk]
 <% if @isamchk_key_buffer -%>
