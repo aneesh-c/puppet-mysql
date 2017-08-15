@@ -1,6 +1,6 @@
 {
   "name": "aneesh-mysql",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "author": "aneesh",
   "summary": "Puppet module for mysql",
   "license": "Apache-2.0",

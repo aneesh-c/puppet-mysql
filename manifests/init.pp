@@ -78,7 +78,7 @@ class mysql (
   }
   if $::osfamily == 'RedHat' {
     service { 'mysqld':
-      require => package[$packagename],
+      require => Package[$packagename],
       enable  => true,
     }
   }
