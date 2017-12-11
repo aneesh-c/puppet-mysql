@@ -83,6 +83,15 @@ character-set-server    = <%= @mysqld_character_set_server %>
 <% if @mysqld_collation_server -%>
 collation-server        = <%= @mysqld_collation_server %>
 <% end -%>
+<% if @mysqld_innodb_buffer_pool_size -%>
+innodb_buffer_pool_size = <%= @mysqld_innodb_buffer_pool_size %>
+<% end -%>
+<% if @mysqld_innodb_log_file_size -%>
+innodb_log_file_size    = <%= @mysqld_innodb_log_file_size %>
+<% end -%>
+<% if @mysqld_max_connections -%>
+max_connections         = <%= @mysqld_max_connections %>
+<% end -%>
 
 [mysqld_safe]
 <% if @mysqld_safe_log_error -%>
