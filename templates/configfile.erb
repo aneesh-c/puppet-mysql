@@ -92,6 +92,9 @@ innodb_log_file_size    = <%= @mysqld_innodb_log_file_size %>
 <% if @mysqld_max_connections -%>
 max_connections         = <%= @mysqld_max_connections %>
 <% end -%>
+<% if @mysqld_sql_mode -%>
+sql_mode                = <%= @mysqld_sql_mode %>
+<% end -%>
 
 [mysqld_safe]
 <% if @mysqld_safe_log_error -%>

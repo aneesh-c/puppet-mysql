@@ -47,6 +47,7 @@ class mysql (
   $mysqld_innodb_buffer_pool_size  = undef,
   $mysqld_innodb_log_file_size     = undef,
   $mysqld_max_connections          = undef,
+  $mysqld_sql_mode                 = undef,
   $mysqld_safe_log_error           = undef,
   $mysqld_safe_pid_file            = undef,
   $mysqld_safe_socket              = undef,
