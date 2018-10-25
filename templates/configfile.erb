@@ -95,6 +95,9 @@ max_connections         = <%= @mysqld_max_connections %>
 <% if @mysqld_sql_mode -%>
 sql_mode                = <%= @mysqld_sql_mode %>
 <% end -%>
+<% if @mysqld_default__authentication__plugin -%>
+default-authentication-plugin = <%= @mysqld_default__authentication__plugin %>
+<% end -%>
 
 [mysqld_safe]
 <% if @mysqld_safe_log_error -%>
