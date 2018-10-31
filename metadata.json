@@ -1,6 +1,6 @@
 {
   "name": "aneesh-mysql",
-  "version": "6.3.0",
+  "version": "7.0.0",
   "author": "aneesh",
   "summary": "Puppet module for mysql",
   "license": "Apache-2.0",
@@ -35,10 +35,9 @@
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "12.04",
         "14.04",
         "16.04",
-        "17.04"
+        "18.04"
       ]
     },
     {

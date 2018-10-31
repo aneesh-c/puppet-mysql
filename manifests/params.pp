@@ -18,7 +18,7 @@ class mysql::params {
           $packagename_default = [ 'mysql-server' ]
           $configfile = '/etc/mysql/mysql.conf.d/mysqld.cnf'
         }
-        /^17.*/: {
+        /^18.*/: {
           $packagename_default = [ 'mysql-server' ]
           $configfile = '/etc/mysql/mysql.conf.d/mysqld.cnf'
         }
